@@ -16,7 +16,7 @@ const character = {
     head: 'bird',
     middle: 'dress',
     pants: 'white',
-    phrases: [],
+    phrases: ['blue', '123'],
 };
 
 headSelect.addEventListener('change', () => {
@@ -51,8 +51,11 @@ function displayPhrases() {
 
     for (const phrase of character.phrases) {
         // > create an <li> element
+        const listItem = document.createElement('li');
         // > set the text of the li to the phrase
+        listItem.textContent = phrase;
         // > append the <li> to the phrases list
+        phraseList.append(listItem);
     }
 }
 
